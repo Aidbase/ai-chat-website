@@ -5,7 +5,7 @@ export default function AboutPage() {
     <main className='flex flex-col items-center justify-between'>
       <TopNavigation page='about' />
 
-      <section className='flex relative flex-col pt-36 items-center w-full h-screen min-h-[300px] sm:min-h-[700px] px-4'>
+      <section className='flex relative flex-col pt-36 items-center w-full min-h-screen px-8 pb-16'>
         <h1 className='text-2xl sm:text-5xl font-bold text-center text-[#3b82f6] tracking-wide leading-normal'>
           AI Chat Website
         </h1>
