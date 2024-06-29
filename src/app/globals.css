@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 4, 26, 60;
+  --background-end-rgb: 0, 0, 0;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.chat-container {
+  height: calc(100vh - 8rem);
+}
+
+.chat-container > span {
+  display: block;
+  height: 100%;
+}
+
+.bg-glassmorphism {
+  background: var(--background-start-rgb);
+  border-bottom: 1px solid #152a52;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 4rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #1a202c;
+  border-radius: 4rem;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #4a5568;
+  border-radius: 4rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #5d6b84;
+}
+
+.loader {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #FFF;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+} 
+
+.bottom-blur {
+  width: 100vw;
+  height: 100vh;
+  max-height: 800px;
+  position: fixed;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.bottom-blur > div {
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(at 40% 45%, #5973c9 10%, transparent 30%), radial-gradient(at 60% 60%, #595072 0%, transparent 80%), radial-gradient(at 30% 60%, #2ab4d9 0%, transparent 30%), radial-gradient(at 70% 70%, #1d979e 0%, transparent 10%), radial-gradient(at 60% 70%, #4f1d9e 0%, transparent 30%);
+  filter: blur(100px);
+  opacity: 0.2;
+  position: absolute;
+  bottom: -25%;
+}
