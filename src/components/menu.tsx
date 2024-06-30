@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React, { FC } from 'react';
-import { FaRegQuestionCircle } from 'react-icons/fa';
+import { FaGithub, FaRegQuestionCircle } from 'react-icons/fa';
 import { FiMessageCircle } from 'react-icons/fi';
 
 export interface MenuProps {
@@ -35,6 +35,13 @@ export const Menu: FC<MenuProps> = ({ page }) => {
           <span className={`${page === 'about' ? 'text-white' : 'text-gray-200'}`}>About</span>
         </button>
       </Link>
+
+      <a href='https://github.com/Aidbase/ai-chat-website' target='_blank'>
+        <button className='flex items-center p-2 rounded-md focus:outline-none hover:bg-[#2a4dc1] text-gray-200'>
+          <FaGithub className='mr-1 text-gray-200' />
+          <span className='text-gray-200'>Use this template</span>
+        </button>
+      </a>
     </div>
   );
 };
