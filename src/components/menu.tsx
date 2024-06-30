@@ -37,9 +37,9 @@ export const Menu: FC<MenuProps> = ({ page }) => {
       </Link>
 
       <a href='https://github.com/Aidbase/ai-chat-website' target='_blank'>
-        <button className='flex items-center p-2 rounded-md focus:outline-none hover:bg-[#2a4dc1] text-gray-200'>
+        <button className='flex items-center p-2 rounded-md focus:outline-none hover:bg-[#2a4dc1] text-gray-200 truncate'>
           <FaGithub className='mr-1 text-gray-200' />
-          <span className='text-gray-200'>Use this template</span>
+          <span className='text-gray-200 text-ellipsis'>Use template</span>
         </button>
       </a>
     </div>
